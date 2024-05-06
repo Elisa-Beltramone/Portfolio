@@ -17,71 +17,22 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    animation: moveStars 30s linear infinite;
+    animation: moveStars 20s linear infinite;
 }
 
-.stars {
+.star {
     position: absolute;
     top: 0;
     left: 0;
     width: 1px;
     height: 1px;
-    background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAtSURBVBhXY1x5+AYAAnMv////////////Gioq6AKYB+jV1tSoAAAAASUVORK5CYII=') repeat;
-    box-shadow: 
-        200px 100px #fff,
-        100px 300px #fff,
-        500px 200px #fff,
-        300px 400px #fff,
-        600px 500px #fff,
-        700px 800px #fff,
-        900px 100px #fff,
-        1000px 600px #fff,
-        1200px 400px #fff,
-        1300px 300px #fff,
-        1500px 700px #fff,
-        1700px 500px #fff,
-        1800px 200px #fff,
-        1900px 600px #fff,
-        2000px 300px #fff,
-        2200px 800px #fff,
-        2400px 100px #fff,
-        2500px 500px #fff,
-        2700px 200px #fff,
-        2800px 600px #fff,
-        3000px 400px #fff,
-        3200px 700px #fff,
-        3400px 300px #fff,
-        3600px 500px #fff,
-        3700px 100px #fff,
-        3800px 600px #fff,
-        4000px 200px #fff,
-        4200px 800px #fff,
-        4400px 300px #fff,
-        4600px 700px #fff,
-        4800px 400px #fff,
-        5000px 600px #fff,
-        5200px 200px #fff,
-        5300px 500px #fff,
-        5500px 100px #fff,
-        5700px 600px #fff,
-        5800px 300px #fff,
-        6000px 800px #fff,
-        6200px 400px #fff,
-        6400px 700px #fff,
-        6600px 300px #fff,
-        6800px 500px #fff,
-        7000px 100px #fff,
-        7200px 600px #fff,
-        7400px 200px #fff,
-        7600px 800px #fff,
-        7800px 400px #fff,
-        8000px 700px #fff;
+    box-shadow: var(--box-shadow);
 }
 
 @keyframes moveStars {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
+        0% { transform: translateX(0); }
+        100% { transform: translateX(100%); }
+    }
 
 .welcome-text {
     margin-top: 80px;
