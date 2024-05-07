@@ -1,12 +1,76 @@
-body {
+body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    background-color: #000;
-    position: relative;
+    height: 100%;
     overflow: hidden;
+    background: linear-gradient(45deg, rgb(21, 0, 21), #001616, rgb(0, 0, 15));
     color: white;
+}
+
+.starsContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(-10px, -10px); /* Ajusta la cantidad de desplazamiento según tu preferencia */
+        opacity: 0;
+    }
+}
+
+
+.welcome {
+    margin-top: 80px;
+    margin-left: 40px;
+    padding: 30px;
+    color: #6217a9;
+    font-size: 48px;
+    opacity: 0;
+    animation: fadeInLeft 5s linear forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(30px);
+        opacity: 1;
+    }
+    50% {
+        left: 40px;
+        opacity: 1;
+    }
+    100% {
+        left: -20px;
+        opacity: 0;
+    }
+} 
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    position: relative;
 }
 
 .starsContainer {
@@ -16,49 +80,14 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden;
     animation: moveStars 20s linear infinite;
 }
-
-.star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 1px;
-    box-shadow: var(--box-shadow);
-}
-
-@keyframes moveStars {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(100%); }
-    }
-
-.welcome-text {
-    margin-top: 80px;
-    margin-left: 40px;
-    padding: 30px;
-    color: #6217a9;
-    font-size: 48px;
-    opacity: 0;
-    animation: fadeInLeft 5s ease forwards;
-}
-
-@keyframes fadeInLeft {
-    0% {
-        transform: translateX(-40px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+*/
 
 .projects-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .project {
