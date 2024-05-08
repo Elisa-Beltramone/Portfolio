@@ -8,6 +8,53 @@ body, html {
     color: white;
 }
 
+@media screen and (max-width: 768px) {
+    .welcome {
+        margin-top: 30px; /* Reducimos el margen superior */
+        font-size: 36px; /* Reducimos el tamaño del texto */
+    }
+
+    .earth {
+        width: 150px; /* Reducimos el tamaño del elemento de la Tierra */
+        height: 150px;
+        background-size: 300px 100%; /* Ajustamos el tamaño del fondo */
+    }
+
+    .projectsContainer {
+        justify-content: center; /* Centramos los proyectos */
+    }
+
+    .project {
+        flex-direction: column; /* Cambiamos la dirección del contenedor de proyectos */
+        margin-right: 0; /* Quitamos el margen derecho */
+    }
+
+    .card {
+        width: 90%; /* Ajustamos el ancho de las tarjetas */
+        margin: 10px auto; /* Centramos las tarjetas */
+    }
+
+    .card > .row > .description {
+        width: auto; /* Ancho automático para el texto de la descripción */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome {
+        font-size: 24px;
+    }
+
+    .earth {
+        width: 100px; 
+        height: 100px;
+        background-size: 200px 100%; /* Ajustamos más el tamaño del fondo */
+    }
+
+    .card {
+        width: 90%; /* Ajustamos aún más el ancho de las tarjetas */
+    }
+}
+
 .starSpace {
     position: absolute;
     width: 100%;
@@ -91,6 +138,46 @@ body, html {
     }
 }
 
+.explore {
+    margin: -50px 180px 50px 0px;
+    text-align: right;   
+    box-sizing: border-box; 
+    color: rgb(39, 4, 39);
+}
+
+.exploreText {
+    font-size: 50px;
+    letter-spacing: 15px;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, red) ; */
+    animation: animate 5s linear;
+    animation-iteration-count: 2;
+}
+
+@keyframes animate {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 83%, 96% {
+        text-shadow: none;
+        color: rgb(39, 4, 39);
+
+    }
+    18.1%, 20.1%, 30%, 50%,  60.1%, 83.1%, 90% {
+        color: rgb(30, 1, 27);
+        text-shadow: 0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9;
+    }
+}
+
+.exploreText:hover {
+        color: rgb(30, 1, 27);
+        text-shadow: 0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9,
+        0 0 10px #6217a9;
+}
+
 .projectsContainer {
     width: 100%;
     height: 100vh;
@@ -120,7 +207,6 @@ body, html {
     transition: 0.6s cubic-bezier(.28, -0.03, 0, .99);
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
     z-index: 2;
-
 }
 
 .card > .row {
