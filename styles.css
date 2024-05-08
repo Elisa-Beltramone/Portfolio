@@ -177,13 +177,12 @@ body, html {
     position: fixed;
     width: 80px;
     height: 80px;
-    left: 120px;
+    left: 180px;
     top: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     rotate: 35deg;
-
 }
 
 img {
@@ -197,15 +196,18 @@ img {
 }
 
 @keyframes fly {
+    10% {
+        transform: translateY(-20px);
+    }
     20%,  {
-        transform: translateX(-50px);
+        transform: translateX(20px);
     }
 
     50% {
-        transform: translateX(50px);
+        transform: translateX(-50px);
     }
     80% {
-        transform: translateY(20px);
+        transform: translateY(50px);
     }
 }
 
@@ -230,6 +232,34 @@ img {
     height: 200px;
     background: linear-gradient(turquoise, transparent);
     filter: blur(20px);
+}
+
+.button {
+    position: relative;
+    top: 280px;
+    left: 275px;
+    padding: 3px 25px;
+    font-size: 20px;
+    background-color: #671481;
+    border-radius: 20px;
+    border: 2px solid #470138; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: aparecer 1s ease-in-out 4s forwards; /* 4 segundos de retraso */
+    opacity: 0;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+button:hover {
+    background-color: #a105c8;
+    border-color: #d206ce;
 }
 
 .explore {
