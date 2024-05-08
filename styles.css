@@ -86,7 +86,6 @@ body, html {
 }
 
 .welcome {
-    margin-top: 80px;
     margin-left: 40px;
     padding: 30px;
     color: #6217a9;
@@ -136,6 +135,10 @@ body, html {
     100% {
         background-position-x: 500px;
     }
+}
+
+.contact {
+    
 }
 
 .explore {
