@@ -32,6 +32,11 @@ document.addEventListener("mousemove", (e) => {
 
             cursor.style.top = y + "px";
             cursor.style.left = x + "px";
+            cursor.style.display = "block";
 } ); 
+
+document.addEventListener("mouseout", () => {
+    cursor.style.display = "none";
+} );
 } )
 
