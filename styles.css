@@ -300,11 +300,6 @@ button:hover {
     }
 }
 
-.exploreText:hover {
-
-        
-}
-
 .projectsContainer {
     width: 100%;
     height: 100vh;
@@ -366,15 +361,6 @@ button:hover {
     transition: all .3s ease;
 }
 
-.description p {
-    color: red;
-    padding-top: 5px;
-}
-
-.description h4 {
-    text-transform: uppercase;
-}
-
 input {
     display: none;
 }
@@ -389,19 +375,11 @@ input:checked + label .description {
     }
 
 .card[for="c1"] {
-    background-image: url(JPG28.jpg);
-}
-
-.card[for="c2"] {
-    background-image: url(JPG61.jpg);
-}
+background: center;}
 
 .card[for="c3"] {
     background-image: url(JPG78.jpg);
 }
 
-.card[for="c4"] {
-    background-image: url(JPG61.jpg);
-}
 
 
